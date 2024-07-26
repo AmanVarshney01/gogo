@@ -1,8 +1,8 @@
 package main
 
-// create basic go http server
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -11,5 +11,6 @@ func main() {
 		fmt.Fprintf(w, "Hello, World!")
 	})
 
+	log.Println("Server is running on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
